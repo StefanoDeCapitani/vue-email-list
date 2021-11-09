@@ -5,3 +5,43 @@
   margin: 0;
   padding: 0;
 }
+
+:root {
+  font-family: "Courier New", Courier, monospace;
+}
+
+#root {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  max-height: 100vh;
+  background-color: antiquewhite;
+}
+
+.container {
+  width: 60vw;
+  height: 70vh;
+  display: grid;
+  grid-template-rows: 4fr 52px;
+}
+
+.email-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.email {
+  padding: 1rem 1.5rem;
+  border: 1px solid gray;
+  border-radius: 0.25rem;
+}
+
+button {
+  border: 1px solid gray;
+  border-radius: 0.25rem;
+  background-color: cadetblue;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.5rem;
+}

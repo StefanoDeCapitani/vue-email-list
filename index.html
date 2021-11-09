@@ -12,9 +12,12 @@
   </head>
   <body>
     <div id="root">
-      <ul>
-        <li v-for="email in emails">{{ email }}</li>
-      </ul>
+      <div class="container">
+        <ul class="email-list">
+          <li v-for="email in emails" class="email">{{ email }}</li>
+        </ul>
+        <button @click="getMultipleEmails(10)">Get emails</button>
+      </div>
     </div>
   </body>
 </html>

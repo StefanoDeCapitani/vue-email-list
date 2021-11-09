@@ -15,17 +15,16 @@ window.addEventListener("DOMContentLoaded", function () {
     },
     methods: {
       getMultipleEmails(numOfEmails) {
+        this.emails = [];
         for (let i = 0; i < numOfEmails; i++) {
           axios
             .get("https://flynn.boolean.careers/exercises/api/random/mail")
             .then((resp) => {
-              this.emails.push(resp.data.response);
+              this.emails.push(resp.data?.response);
             });
         }
       },
     },
-    mounted() {
-      this.getMultipleEmails(10);
-    },
+    mounted() {},
   });
 });
