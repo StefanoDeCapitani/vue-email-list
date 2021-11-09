@@ -11,9 +11,21 @@ window.addEventListener("DOMContentLoaded", function () {
   const vm = new Vue({
     el: "#root",
     data: {
-      message: "ciao",
+      emails: [],
     },
-    methods: {},
-    mounted() {},
+    methods: {
+      getMultipleEmails(numOfEmails) {
+        for (let i = 0; i < numOfEmails; i++) {
+          axios
+            .get("https://flynn.boolean.careers/exercises/api/random/mail")
+            .then((resp) => {
+              this.emails.push(resp.data.response);
+            });
+        }
+      },
+    },
+    mounted() {
+      this.getMultipleEmails(10);
+    },
   });
 });

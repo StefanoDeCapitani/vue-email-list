@@ -11,6 +11,10 @@
     <title>Vue email</title>
   </head>
   <body>
-    <div id="root"><h1>{{message}}</h1></div>
+    <div id="root">
+      <ul>
+        <li v-for="email in emails">{{ email }}</li>
+      </ul>
+    </div>
   </body>
 </html>
